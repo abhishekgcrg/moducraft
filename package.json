@@ -1,0 +1,19 @@
+{
+  "name": "moducraft",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @moducraft/web dev",
+    "dev:api": "pnpm --filter @moducraft/api dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "db:status": "pnpm --filter @moducraft/api db:status",
+    "db:migrate": "pnpm --filter @moducraft/api db:migrate",
+    "db:adopt": "pnpm --filter @moducraft/api db:adopt"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

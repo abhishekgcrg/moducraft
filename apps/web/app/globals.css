@@ -1,0 +1,23 @@
+:root { color-scheme: dark; --bg: #0a0d12; --panel: #111720; --line: #253141; --text: #eef4fb; --muted: #a0aec0; --accent: #82e6c0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body { background-image: radial-gradient(ellipse at 50% 0%, #19332f 0%, transparent 46%); }
+.shell { max-width: 1120px; margin: 0 auto; padding: 28px 24px 40px; }
+.nav { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); padding-bottom:20px; }
+.brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-.03em; font-size:18px; }
+.mark { display:grid; place-items:center; width:30px; height:30px; background:var(--accent); color:#06251d; border-radius:9px; font-weight:900; }
+.phase { color:var(--muted); font-size:11px; letter-spacing:.16em; }
+.hero { padding:96px 0 70px; max-width:760px; }
+.eyebrow { color:var(--accent); font-size:12px; font-weight:700; letter-spacing:.2em; }
+h1 { font-size:clamp(48px, 8vw, 84px); line-height:.99; letter-spacing:-.065em; margin:20px 0 24px; }
+h1 span { color:var(--accent); }
+.intro { color:var(--muted); max-width:590px; font-size:18px; line-height:1.75; }
+.status { display:inline-flex; align-items:center; gap:9px; margin-top:18px; padding:10px 13px; border:1px solid var(--line); border-radius:999px; color:#cbd7e5; font-size:13px; }
+.dot { width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 12px #82e6c077; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.card { border:1px solid var(--line); border-radius:16px; background:linear-gradient(145deg,#141c26,#0e131b); padding:24px; }
+.cardIcon { display:grid; place-items:center; width:42px; height:42px; border:1px solid #31564c; border-radius:12px; color:var(--accent); font-size:22px; }
+h2 { margin:22px 0 10px; font-size:19px; letter-spacing:-.03em; }
+.card p { color:var(--muted); font-size:14px; line-height:1.7; margin:0; }
+footer { border-top:1px solid var(--line); margin-top:50px; padding-top:20px; color:#738196; font-size:12px; }
+@media(max-width:700px) { .hero { padding:68px 0 46px; } .grid { grid-template-columns:1fr; } .phase { font-size:9px; } .shell { padding:20px 16px 30px; } }

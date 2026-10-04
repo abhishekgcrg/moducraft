@@ -1,0 +1,30 @@
+{
+  "name": "@moducraft/api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "tsx --env-file-if-exists=../../.env.test --env-file-if-exists=.env.test --import ./test/helpers/test-bootstrap.ts --test",
+    "test:unit": "tsx --import ./test/helpers/test-bootstrap.ts --test test/bootstrap-order.test.ts test/auth-verifier.test.ts test/test-db-guard.test.ts test/cli-target-validation.test.ts test/cloud-provider-contracts.test.ts",
+    "test:task52": "tsx --import ./test/helpers/test-bootstrap.ts --test test/resource-schema-rls.test.ts",
+    "test:task53": "tsx --import ./test/helpers/test-bootstrap.ts --test test/resource-routes.test.ts",
+    "db:status": "tsx src/db/cli.ts status",
+    "db:migrate": "tsx src/db/cli.ts migrate",
+    "db:adopt": "tsx src/db/cli.ts adopt"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1",
+    "jose": "^6.2.12",
+    "pg": "^8.23.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
